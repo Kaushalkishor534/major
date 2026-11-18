@@ -4,7 +4,7 @@ import numpy as np, pandas as pd, streamlit as st, plotly.graph_objects as go
 from catboost import CatBoostClassifier, Pool
 from sklearn.metrics import roc_auc_score
 
-ROOT = Path(__file__).parent; ART = ROOT / "artifacts"
+ROOT = Path(__file__).parent; ART = Path(__file__).resolve().parent
 st.set_page_config(page_title="CredenceAI", page_icon="📈", layout="wide")
 st.markdown("""<style>
 [data-testid="stAppViewContainer"]{background:#f6f6f3}
