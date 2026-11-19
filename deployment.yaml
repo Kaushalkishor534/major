@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: credenceai
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: credenceai
+  template:
+    metadata:
+      labels:
+        app: credenceai
+    spec:
+      containers:
+        - name: credenceai
+          image: credenceai:latest
+          imagePullPolicy: Never
+          ports:
+            - containerPort: 8501
